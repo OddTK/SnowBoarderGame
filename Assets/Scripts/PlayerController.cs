@@ -20,11 +20,11 @@ public class PlayerController : MonoBehaviour
     {
         // if the input key is the left arrow key then applying torque
         // i.e. a force that rotates our character when pressing the left arrow key
-        if(Input.GetKey(KeyCode.LeftArrow))
+        if(Input.GetKey(KeyCode.A))
         {
             rb2d.AddTorque(torqueAmount);
         }
-        if(Input.GetKey(KeyCode.RightArrow))
+        else if(Input.GetKey(KeyCode.D))
         {
             rb2d.AddTorque(-torqueAmount);
         }
