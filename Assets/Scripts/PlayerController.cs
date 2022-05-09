@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     // accessing Rigidbody2D
     Rigidbody2D rb2d;
     SurfaceEffector2D surfaceEffector2D;
+    bool canMove = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,10 +24,18 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        RespondToBoost();
+        if(canMove)
+        {
+            RespondToBoost();
         // if the input key is the left arrow key then applying torque
         // i.e. a force that rotates our character when pressing the left arrow key
-        RotatePlayer();
+            RotatePlayer();
+        }
+    }
+
+    public void DisableControls()
+    {
+        canMove = false;
     }
 
     void RespondToBoost()
