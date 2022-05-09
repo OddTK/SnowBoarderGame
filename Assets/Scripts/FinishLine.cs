@@ -9,6 +9,7 @@ public class FinishLine : MonoBehaviour
     {
         if(other.tag == "Player")
         {
+            // here we are using SceneManager to allow us to load our level1 scene once the player collides with our end pole
             SceneManager.LoadScene(0);
         }
     }
