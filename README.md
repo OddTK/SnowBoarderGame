@@ -1,4 +1,4 @@
-# SnowBoarderGame
+# 2D Snow Boarder Game
 
 ## TABLE OF CONTENTS:
 - [Description](#description)
